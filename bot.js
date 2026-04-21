@@ -15,21 +15,12 @@ const client = new Client({
 
 // ─── CONFIG ────────────────────────────────────────────────
 const CONFIG = {
-  BOT_TOKEN: 'b7e4bf149c9951a3f993794d126a59ccf13834e578772e282dc7871e48d67636',
-
-  // Channel where Snipe Logs posts invoices (copy ID from Discord)
-  INVOICE_CHANNEL_ID: '1496094366358573168',
-
-  // Channel where the bot posts weekly payout summaries
-  PAYOUT_CHANNEL_ID: '1496094385979396198',
-
-  // What percentage of each paid invoice goes to the employee
-  // e.g. 0.70 = 70%. Change this whenever you settle on your formula.
+  BOT_TOKEN: process.env.BOT_TOKEN,
+  INVOICE_CHANNEL_ID: process.env.INVOICE_CHANNEL_ID,
+  PAYOUT_CHANNEL_ID: process.env.PAYOUT_CHANNEL_ID,
   CUT_PERCENT: 0.70,
-
-  // Day + hour to auto-post the weekly payout (0 = Sunday, 1 = Monday, etc.)
-  PAYOUT_DAY: 0,    // Sunday
-  PAYOUT_HOUR: 20,  // 8 PM server time
+  PAYOUT_DAY: 0,
+  PAYOUT_HOUR: 20,
 };
 // ───────────────────────────────────────────────────────────
 
